@@ -20,4 +20,8 @@ new Promise(async (resolve, reject) => {
     console.log(json);
     resolve(json);
   }
+}).then((data) => {
+//enderizar el componente y hacerlo usable en el main
+  // Ejemplo de renderizado del componente:
+  // <ComponenteDatos data={data} />
 });

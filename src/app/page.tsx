@@ -22,6 +22,7 @@ export default function Home() {
      />
 
      <Nodo2 />
+     
     </main>
     </NextUIProvider>
   )
