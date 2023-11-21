@@ -33,7 +33,7 @@ export default function CoinGecko() {
     <Card >
         <h1 className="text-xl pb-4">Coingeko</h1>
         <p>id: {data.id}</p>
-
+        <p>Usd: {data.marketData?.currentPrice?.usd}</p>
         <p>Descripción: {data.description.es}</p>
     </Card>
   );
