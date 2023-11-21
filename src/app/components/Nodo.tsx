@@ -66,7 +66,7 @@ export default function Nodo1() {
 
     return (
         <Card >
-            <h1 className="text-xl pb-4">Nodo Platohedro</h1>
+            <h1 className="text-xl pb-4">Nodo Cypherplatxs</h1>
             <p>Mix ID: 915</p>
             <p>Host: {data.mix_node.host}</p>
             <p>Layer: {data.layer}</p>
