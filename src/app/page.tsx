@@ -6,8 +6,8 @@ import NavBar from './components/NavBar';
 import Tarjeta from './components/Card';
 import Header from './components/Header';
 import Nodo2 from './components/Nodo2';
-
-  import Nodo1 from './components/Nodo';
+import Nodo1 from './components/Nodo';
+import CoinGecko from './components/Coingeko';
 
 export default function Home() {
   return ( <NextUIProvider>
@@ -22,6 +22,7 @@ export default function Home() {
      />
 
      <Nodo2 />
+     <CoinGecko />
      
     </main>
     </NextUIProvider>

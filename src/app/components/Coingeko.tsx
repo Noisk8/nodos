@@ -1,27 +1,40 @@
-const axios = require('axios');
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Card } from '@nextui-org/react';
 
-let response = null;
-new Promise(async (resolve, reject) => {
-  try {
-    response = await axios.get('https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
-      headers: {
-        'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c',
-      },
+interface CoinGeckoProps {
+  id: string;
+  description: {
+    es: string;
+  };
+  image: string;
+  marketData: {
+    currentPrice: {
+      usd: number;
+    };
+  };
+}
+
+export default function CoinGecko() {
+  const [data, setData] = useState<CoinGeckoProps | null>(null);
+
+  useEffect(() => {
+    axios.get('https://api.coingecko.com/api/v3/coins/nym')
+    .then(response => {
+      setData(response.data);
     });
-  } catch(ex) {
-    response = null;
-    // error
-    console.log(ex);
-    reject(ex);
+  }, []);
+
+  if (!data) {
+    return <div>Cargando...</div>;
   }
-  if (response) {
-    // success
-    const json = response.data;
-    console.log(json);
-    resolve(json);
-  }
-}).then((data) => {
-//enderizar el componente y hacerlo usable en el main
-  // Ejemplo de renderizado del componente:
-  // <ComponenteDatos data={data} />
-});
+
+  return (
+    <Card >
+        <h1 className="text-xl pb-4">Coingeko</h1>
+        <p>id: {data.id}</p>
+
+        <p>Descripción: {data.description.es}</p>
+    </Card>
+  );
+}
