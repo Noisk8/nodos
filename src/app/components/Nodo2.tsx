@@ -61,7 +61,7 @@ export default function Nodo2() {
     }, []);
 
     if (!data) {
-        return <div>Cargando...</div>;
+        return <div>SERGIO...</div>;
     }
 
     return (

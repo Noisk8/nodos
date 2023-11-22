@@ -66,29 +66,33 @@ export default function Nodo1() {
 
     return (
         <Card >
-            <h1 className="text-xl pb-4">Nodo Cypherplatxs</h1>
-            <p>Mix ID: 915</p>
-            <p>Host: {data.mix_node.host}</p>
-            <p>Layer: {data.layer}</p>
-            <p>Version: {data.mix_node.version}</p>
-            <p>Sphinx Key: {data.mix_node.sphinx_key}</p>
-            <p>Country Name: {data.location.country_name}</p>
-            <p>Latitude: {data.location.latitude}</p>
-            <p>Longitude: {data.location.longitude}</p>
-            <p>Status: {data.status}</p>
-            <p>Pledge Amount: {data.pledge_amount.amount} {data.pledge_amount.denom}</p>
-            <p>Total Delegation: {data.total_delegation.amount} {data.total_delegation.denom}</p>
-            <p>Owner: {data.owner}</p>
-            <p>Stake Saturation: {data.stake_saturation}</p>
-            <p>Uncapped Saturation: {data.uncapped_saturation}</p>
-            <p>Average Uptime: {data.avg_uptime}</p>
-            <p>Node Performance: {data.node_performance.most_recent}/{data.node_performance.last_hour}/{data.node_performance.last_24h}</p>
-            <p>Estimated Operator APY: {data.estimated_operator_apy}</p>
-            <p>Estimated Delegators APY: {data.estimated_delegators_apy}</p>
-            <p>Operating Cost: {data.operating_cost.amount} {data.operating_cost.denom}</p>
-            <p>Profit Margin Percent: {data.profit_margin_percent}</p>
-            <p>Family ID: {data.family_id}</p>
-            <p>Blacklisted: {data.blacklisted.toString()}</p>
+            <div className="shadow-lg rounded-lg overflow-hidden">
+                <h1 className="text-xl pb-4 bg-gray-100 px-4 py-2">Nodo Cypherplatxs</h1>
+                <div className="p-4">
+                    <p className="border-b">Mix ID: 915</p>
+                    <p className="border-b">Host: {data.mix_node.host}</p>
+                    <p className="border-b">Layer: {data.layer}</p>
+                    <p className="border-b">Version: {data.mix_node.version}</p>
+                    <p className="border-b">Sphinx Key: {data.mix_node.sphinx_key}</p>
+                    <p className="border-b">Country Name: {data.location.country_name}</p>
+                    <p className="border-b">Latitude: {data.location.latitude}</p>
+                    <p className="border-b">Longitude: {data.location.longitude}</p>
+                    <p className="border-b">Status: {data.status}</p>
+                    <p className="border-b">Pledge Amount: {data.pledge_amount.amount} {data.pledge_amount.denom}</p>
+                    <p className="border-b">Total Delegation: {data.total_delegation.amount} {data.total_delegation.denom}</p>
+                    <p className="border-b">Owner: {data.owner}</p>
+                    <p className="border-b">Stake Saturation: {data.stake_saturation}</p>
+                    <p className="border-b">Uncapped Saturation: {data.uncapped_saturation}</p>
+                    <p className="border-b">Average Uptime: {data.avg_uptime}</p>
+                    <p className="border-b">Node Performance: {data.node_performance.most_recent}/{data.node_performance.last_hour}/{data.node_performance.last_24h}</p>
+                    <p className="border-b">Estimated Operator APY: {data.estimated_operator_apy}</p>
+                    <p className="border-b">Estimated Delegators APY: {data.estimated_delegators_apy}</p>
+                    <p className="border-b">Operating Cost: {data.operating_cost.amount} {data.operating_cost.denom}</p>
+                    <p className="border-b">Profit Margin Percent: {data.profit_margin_percent}</p>
+                    <p className="border-b">Family ID: {data.family_id}</p>
+                    <p>Blacklisted: {data.blacklisted.toString()}</p>
+                </div>
+            </div>
         </Card>
     );
 }
