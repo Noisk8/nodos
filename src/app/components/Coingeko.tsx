@@ -53,7 +53,7 @@ export default function CoinGecko() {
         1 Nym = {data.currentPrice.usd} USD
       </h2>
       <p className="text-lg pt-2 self-start">
-        Rango de Capitalización de Mercado: {data.marketCapRank}
+        Rango de Cap en Mercado: {data.marketCapRank}
       </p>
     </div>
   );

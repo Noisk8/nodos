@@ -5,11 +5,10 @@ import {NextUIProvider} from "@nextui-org/react";
 import NavBar from './components/NavBar';
 import Tarjeta from './components/Card';
 import Header from './components/Header';
-import Nodo2 from './components/Nodo2';
-import Nodo1 from './components/Nodo';
 import CoinGecko from './components/Coingeko';
 import Carreto from './components/Carreto';
-import Tarjetas from './components/Nodxs';
+import Staking from './components/Staking';
+
 
 export default function Home() {
   return ( <NextUIProvider>
@@ -39,7 +38,7 @@ export default function Home() {
         hyperlink='https://www.southpark.lat/episodios/welysd/south-park-el-secuestro-infantil-no-tiene-gracia-temporada-6-ep-11'
         
         />
-        
+        <Staking />
     
    </div>
     </main>

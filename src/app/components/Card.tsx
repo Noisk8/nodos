@@ -10,7 +10,7 @@ interface CardProps {
   hyperlink:string;
 }
 
-export default function Tarjeta({ title, subtitle, imageSrc, imageAlt,titulo }: CardProps) {
+export default function Tarjeta({ title, subtitle, imageSrc, imageAlt,titulo, hyperlink }: CardProps) {
   return (
     <Card className="py-4 bg-gray-900 p-5 rounded-lg shadow-xl text-purple-300 flex flex-wrap " style={{boxShadow: "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)"}}>
       <CardHeader className="pb-0 pt-2 px-4 flex-col ">
@@ -20,7 +20,7 @@ export default function Tarjeta({ title, subtitle, imageSrc, imageAlt,titulo }: 
         
       </CardHeader>
       <CardBody className="overflow-visible py-2">
-       <a href="{hyperlink}" target="_blank" rel="noopener noreferrer">
+       <a href={hyperlink} target="_blank" >
          <Image
            alt={imageAlt}
            className="object-cover rounded-xl"
