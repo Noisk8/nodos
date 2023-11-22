@@ -21,7 +21,7 @@ export default function Home() {
     <CoinGecko />
 
     <div className='flex flex-wrap justify-around w-full mt-20' style={{maxWidth: '800px', gap: '10px'}}>
-        <Tarjeta imageSrc='https://raw.githubusercontent.com/cypherplatxs/Achura/main/frontend/public/achura.jpg'
+        <Tarjeta imageSrc='/2.jpeg'
         imageAlt='perrr'
         title='Peroo'
         subtitle='perooo'
@@ -30,7 +30,7 @@ export default function Home() {
         />
 
    
-        <Tarjeta imageSrc='https://raw.githubusercontent.com/cypherplatxs/Achura/main/frontend/public/achura.jpg'
+        <Tarjeta imageSrc='/1.jpeg'
         imageAlt='perrr'
         title='Peroo'
         subtitle='perooo'
