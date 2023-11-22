@@ -61,7 +61,7 @@ export default function Nodo1() {
     }, []);
 
     if (!data) {
-        return <div>Cargando...</div>;
+        return <div className="animate-pulse">🕸️</div>;
     }
 
     return (

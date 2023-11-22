@@ -8,13 +8,14 @@ import Header from './components/Header';
 import Nodo2 from './components/Nodo2';
 import Nodo1 from './components/Nodo';
 import CoinGecko from './components/Coingeko';
+import Carreto from './components/Carreto';
 
 export default function Home() {
   return ( <NextUIProvider>
     <NavBar />
 <Header parrafo="Cypherplatxs" imageAlt="esta foto" imageSrc="https://raw.githubusercontent.com/cypherplatxs/cypherplatxs.github.io/main/public/logo-cypherplatxs-unscreen.gif"/>
 
-
+<Carreto />
 
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
     <CoinGecko />

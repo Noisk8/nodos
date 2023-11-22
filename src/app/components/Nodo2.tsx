@@ -61,7 +61,7 @@ export default function Nodo2() {
     }, []);
 
     if (!data) {
-        return <div>SERGIO...</div>;
+        return <div className="animate-pulse">🕸️</div>;
     }
 
     return (

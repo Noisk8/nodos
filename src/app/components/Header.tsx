@@ -20,7 +20,7 @@ return (
     isZoomed
     width={240}
     alt={imageAlt}
-    className="object-cover rounded-xl opacity-50"
+    className="animate-pulse object-cover rounded-xl opacity-50 "
     src={imageSrc}
   />
 
