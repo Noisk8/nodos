@@ -43,11 +43,11 @@ export default function CoinGecko() {
 
   return (
    <>
-   {console.log('la data',data)}
-        <h1 className="text-xl pb-4">Coingeko</h1>
-        <p>id: {data.marketCapRank}</p>
-        <p>Usd: {data.currentPrice.usd}</p>
-      
+   <div className="bg-gray-900 p-5 rounded-lg shadow-xl text-purple-300">
+        <h1 className="text-3xl font-bold pb-4 border-b border-purple-700">Coingeko</h1>
+        <h2 className="text-2xl font-semibold pt-4">1 Nym = {data.currentPrice.usd} USD</h2>
+        <p className="text-lg pt-2">Rango de Capitalización de Mercado: {data.marketCapRank}</p>
+   </div>
         </>
   );
   }

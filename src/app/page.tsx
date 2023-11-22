@@ -12,9 +12,14 @@ import CoinGecko from './components/Coingeko';
 export default function Home() {
   return ( <NextUIProvider>
     <NavBar />
-<Header parrafo="Nodo Platohedro" imageAlt="esta foto" imageSrc="https://raw.githubusercontent.com/cypherplatxs/Achura/main/frontend/public/achura.jpg"/>
-<Nodo1 />
+<Header parrafo="Cypherplatxs" imageAlt="esta foto" imageSrc="https://raw.githubusercontent.com/cypherplatxs/cypherplatxs.github.io/main/public/logo-cypherplatxs-unscreen.gif"/>
+
+
+
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <CoinGecko />
+     
+    <Nodo1 />
      <Tarjeta imageSrc='https://raw.githubusercontent.com/cypherplatxs/Achura/main/frontend/public/achura.jpg'
      imageAlt='perrr'
      title='Peroo'
@@ -22,7 +27,7 @@ export default function Home() {
      />
 
      <Nodo2 />
-     <CoinGecko />
+     
      
     </main>
     </NextUIProvider>
