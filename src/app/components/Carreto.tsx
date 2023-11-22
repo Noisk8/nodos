@@ -5,7 +5,7 @@ import {Link} from "@nextui-org/react";
 
 export default function Carreto() {
   return (
-    <div className="bg-gray-900 p-6 rounded-lg shadow-xl text-white max-w-md mx-auto" style={{boxShadow: "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)"}}>
+    <div className="bg-gray-900 p-6 mt-10 rounded-lg shadow-xl text-white max-w-md mx-auto" style={{boxShadow: "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)"}}>
     <div className="flex justify-center items-center">
       <div className="text-neon">
         <p>🌐  Cypherplatxs es un programa de{' '}

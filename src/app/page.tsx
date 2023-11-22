@@ -18,20 +18,30 @@ export default function Home() {
 
 <Carreto />
 
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center  p-24">
     <CoinGecko />
-    
-     <Tarjetas />
-    <Nodo1 />
-     <Tarjeta imageSrc='https://raw.githubusercontent.com/cypherplatxs/Achura/main/frontend/public/achura.jpg'
-     imageAlt='perrr'
-     title='Peroo'
-     subtitle='perooo'
-     />
 
-     <Nodo2 />
-     
-     
+    <div className='flex flex-wrap justify-around w-full mt-20' style={{maxWidth: '800px', gap: '10px'}}>
+        <Tarjeta imageSrc='https://raw.githubusercontent.com/cypherplatxs/Achura/main/frontend/public/achura.jpg'
+        imageAlt='perrr'
+        title='Peroo'
+        subtitle='perooo'
+        titulo='NODO CYPHERPLATXS'
+        hyperlink='https://www.southpark.lat/episodios/welysd/south-park-el-secuestro-infantil-no-tiene-gracia-temporada-6-ep-11'
+        />
+
+   
+        <Tarjeta imageSrc='https://raw.githubusercontent.com/cypherplatxs/Achura/main/frontend/public/achura.jpg'
+        imageAlt='perrr'
+        title='Peroo'
+        subtitle='perooo'
+        titulo='NODO PLATOHEDRO'
+        hyperlink='https://www.southpark.lat/episodios/welysd/south-park-el-secuestro-infantil-no-tiene-gracia-temporada-6-ep-11'
+        
+        />
+        
+    
+   </div>
     </main>
     </NextUIProvider>
   )
