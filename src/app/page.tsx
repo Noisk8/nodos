@@ -9,6 +9,7 @@ import Nodo2 from './components/Nodo2';
 import Nodo1 from './components/Nodo';
 import CoinGecko from './components/Coingeko';
 import Carreto from './components/Carreto';
+import Tarjetas from './components/Nodxs';
 
 export default function Home() {
   return ( <NextUIProvider>
@@ -19,7 +20,8 @@ export default function Home() {
 
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
     <CoinGecko />
-     
+    
+     <Tarjetas />
     <Nodo1 />
      <Tarjeta imageSrc='https://raw.githubusercontent.com/cypherplatxs/Achura/main/frontend/public/achura.jpg'
      imageAlt='perrr'
