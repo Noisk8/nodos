@@ -69,7 +69,7 @@ export default function Nodo1() {
     Nodo Cypherplatxs 🇦🇷
   </h1>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-    <div>
+    <div >
       <h3 className="text-xl">Mix ID: </h3>
       <p className="">915</p>{" "}
     </div>
@@ -91,7 +91,7 @@ export default function Nodo1() {
       <h3 className="text-xl">Status:</h3>{" "}
       <p className=""> {data.status}</p>
     </div>
-    <a href="#" className="bg-gray-800 hover:bg-purple-300 text-white font-bold py-4 px-4 rounded">
+    <a href="https://mixnet.explorers.guru/mixnode/4CXwTxgoDoeUcrX4HYH9cFTegRNUTCij9eLugaymiyGf"  target="_blank"   className="bg-gray-800 hover:bg-purple-300 text-white font-bold py-4 px-4 rounded">
   Ver en Explorer
 </a>
 

@@ -8,7 +8,7 @@ export default function Carreto() {
 <div className="bg-gray-900 p-6 mt-10 rounded-lg shadow-xl text-white mx-auto max-w-2xl mb-8 md:mb-0" style={{ boxShadow: "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)" }}>
   <div className="text-neon">
     <p className="md:text-lg">
-      🧑‍💻 Administramos dos nodos de nym los cuales son de{" "}
+      🧑‍💻 Operamos 2 Mix-Nodes de{" "}
       <a href="#" className="text-fuchsia-500 hover:underline">
         DAOariwas
       </a>
