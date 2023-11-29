@@ -8,8 +8,7 @@ interface Nodo1Props {
         two_letter_iso_country_code: string;
         three_letter_iso_country_code: string;
         country_name: string;
-        latitude: number;
-        longitude: number;
+        
     };
     status: string;
     pledge_amount: {
@@ -46,8 +45,8 @@ interface Nodo1Props {
         amount: string;
     };
     profit_margin_percent: string;
-    family_id: null | string;
-    blacklisted: boolean;
+  
+   
 }
 
 export default function Nodo1() {
@@ -67,18 +66,20 @@ export default function Nodo1() {
     return (
         <Card >
             <div className="shadow-lg rounded-lg overflow-hidden">
-                <h1 className="text-xl pb-4 bg-gray-100 px-4 py-2">Nodo Cypherplatxs</h1>
-                <div className="p-4">
-                    <p className="border-b">Mix ID: 915</p>
-                    <p className="border-b">Host: {data.mix_node.host}</p>
+                <h1 className="text-xl pb-4 bg-gray-100 px-4 py-2 font-bold">Nodo Cypherplatxs</h1>
+                <div className="p-4 space-y-2 flex flex-wrap justify-between">
+                   
+                   
+                    <div><h3 className="text-xl">Mix ID:  </h3><p className="border-b"> 915</p>     </div>
+                    <div><h3 className="text-xl">Host: </h3> <p className="border-b"> {data.mix_node.host}</p> </div>
+                    
                     <p className="border-b">Layer: {data.layer}</p>
                     <p className="border-b">Version: {data.mix_node.version}</p>
                     <p className="border-b">Sphinx Key: {data.mix_node.sphinx_key}</p>
                     <p className="border-b">Country Name: {data.location.country_name}</p>
-                    <p className="border-b">Latitude: {data.location.latitude}</p>
-                    <p className="border-b">Longitude: {data.location.longitude}</p>
+               
                     <p className="border-b">Status: {data.status}</p>
-                    <p className="border-b">Pledge Amount: {data.pledge_amount.amount} {data.pledge_amount.denom}</p>
+                   
                     <p className="border-b">Total Delegation: {data.total_delegation.amount} {data.total_delegation.denom}</p>
                     <p className="border-b">Owner: {data.owner}</p>
                     <p className="border-b">Stake Saturation: {data.stake_saturation}</p>
@@ -89,8 +90,7 @@ export default function Nodo1() {
                     <p className="border-b">Estimated Delegators APY: {data.estimated_delegators_apy}</p>
                     <p className="border-b">Operating Cost: {data.operating_cost.amount} {data.operating_cost.denom}</p>
                     <p className="border-b">Profit Margin Percent: {data.profit_margin_percent}</p>
-                    <p className="border-b">Family ID: {data.family_id}</p>
-                    <p>Blacklisted: {data.blacklisted.toString()}</p>
+                 
                 </div>
             </div>
         </Card>

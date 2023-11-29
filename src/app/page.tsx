@@ -8,6 +8,7 @@ import Header from './components/Header';
 import CoinGecko from './components/Coingeko';
 import Carreto from './components/Carreto';
 import Staking from './components/Staking';
+import Nodo1 from './components/Nodo';
 
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
         
         />
         <Staking />
-    
+    <Nodo1 />
    </div>
     </main>
     </NextUIProvider>
