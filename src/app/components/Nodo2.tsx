@@ -66,8 +66,9 @@ export default function Nodo2() {
 
     return (
         <Card style={{boxShadow: "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)"}}>
+        <div className="max-w-1xl mx-auto mt-8">
       <div className="shadow-lg rounded-lg overflow-hidden text-purple-300 bg-gray-900 mt-8">
-  <h1 className="text-xl pb-4 bg-gray-800 px-4 py-2 font-bold">
+  <h1 className="text-xl pb-4 bg-gray-800 px-4 py-2 font-bold text-center">
     Nodo Platohedro 🇨🇴
   </h1>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
@@ -97,6 +98,7 @@ export default function Nodo2() {
   Ver en Explorer
 </a>
   </div>
+</div>
 </div>
     </Card>
     );

@@ -20,9 +20,11 @@ export default function Home() {
 
         <Carreto />
 
-        <div>
+        <div className=" mx-auto flex flex-wrap items-center justify-center">
           <Nodo1 />
+          
           <Nodo2 />
+
         </div>
         <CoinGecko />
         <div
