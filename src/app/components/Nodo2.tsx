@@ -93,6 +93,9 @@ export default function Nodo2() {
       <h3 className="text-xl">Status:</h3>{" "}
       <p className=""> {data.status}</p>
     </div>
+    <a href="https://mixnet.explorers.guru/mixnode/2vUmeYe1hvuoxXG9wANMX1VSC4uF4fYgbakiTjTizcJS" target="_blank" className="bg-gray-800 hover:bg-purple-300 text-white font-bold py-4 px-4 rounded">
+  Ver en Explorer
+</a>
   </div>
 </div>
     </Card>
