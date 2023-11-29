@@ -40,7 +40,7 @@ export default function CoinGecko() {
 
   // Renderizar la interfaz de usuario con los datos de la criptomoneda
   return (
-    <div className="bg-gray-900 p-5 rounded-lg shadow-xl text-purple-300 flex flex-col items-end mb-8" style={{boxShadow: "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)"}}>
+    <div className="bg-gray-900 p-5 rounded-lg shadow-xl text-purple-300 flex flex-col items-end mb-8 mt-8" style={{boxShadow: "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)"}}>
       <div className="flex justify-between items-center w-full">
         <p></p>
         <Avatar
