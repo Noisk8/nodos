@@ -67,29 +67,28 @@ export default function Nodo1() {
         <Card >
             <div className="shadow-lg rounded-lg overflow-hidden">
                 <h1 className="text-xl pb-4 bg-gray-100 px-4 py-2 font-bold">Nodo Cypherplatxs</h1>
-                <div className="p-4 space-y-2 flex flex-wrap justify-between">
+                <div className="p-8 space-y-2 flex flex-wrap justify-between">
                    
                    
-                    <div><h3 className="text-xl">Mix ID:  </h3><p className="border-b"> 915</p>     </div>
-                    <div><h3 className="text-xl">Host: </h3> <p className="border-b"> {data.mix_node.host}</p> </div>
-                    
-                    <p className="border-b">Layer: {data.layer}</p>
-                    <p className="border-b">Version: {data.mix_node.version}</p>
-                    <p className="border-b">Sphinx Key: {data.mix_node.sphinx_key}</p>
-                    <p className="border-b">Country Name: {data.location.country_name}</p>
+                    <div><h3 className="text-xl">Mix ID:  </h3><p className=""> 915</p>     </div>
+                    <div><h3 className="text-xl">Host: </h3> <p className=""> {data.mix_node.host}</p> </div>
+                    <div> <h3 className="text-xl">Layer: </h3>   <p className="">{data.layer}</p></div>
+                  <div> <h3 className="text-xl">Version: </h3> <p className=""> {data.mix_node.version}</p></div>
+                    <div> <h3 className="text-xl">Sphinx Key:</h3>  <p className="b"> {data.mix_node.sphinx_key}</p></div>
+                    <div ><h3 className="text-xl">Country: </h3> <p className="">  {data.location.country_name}</p> </div>
+                   
+                    <div><h3 className="text-xl">Status:</h3> <p className=""> {data.status}</p></div>
                
-                    <p className="border-b">Status: {data.status}</p>
+                
+                
+                    
+                    
+                    
+                    
                    
-                    <p className="border-b">Total Delegation: {data.total_delegation.amount} {data.total_delegation.denom}</p>
-                    <p className="border-b">Owner: {data.owner}</p>
-                    <p className="border-b">Stake Saturation: {data.stake_saturation}</p>
-                    <p className="border-b">Uncapped Saturation: {data.uncapped_saturation}</p>
-                    <p className="border-b">Average Uptime: {data.avg_uptime}</p>
-                    <p className="border-b">Node Performance: {data.node_performance.most_recent}/{data.node_performance.last_hour}/{data.node_performance.last_24h}</p>
-                    <p className="border-b">Estimated Operator APY: {data.estimated_operator_apy}</p>
-                    <p className="border-b">Estimated Delegators APY: {data.estimated_delegators_apy}</p>
-                    <p className="border-b">Operating Cost: {data.operating_cost.amount} {data.operating_cost.denom}</p>
-                    <p className="border-b">Profit Margin Percent: {data.profit_margin_percent}</p>
+                    
+                    
+                  
                  
                 </div>
             </div>
