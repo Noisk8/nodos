@@ -1,9 +1,6 @@
 "use client";
-import Image from "next/image";
 import * as React from "react";
 import { NextUIProvider } from "@nextui-org/react";
-import NavBar from "./components/NavBar";
-import Tarjeta from "./components/Card";
 import Header from "./components/Header";
 import CoinGecko from "./components/Coingeko";
 import Carreto from "./components/Carreto";
@@ -29,7 +26,7 @@ export default function Home() {
         </div>
         <CoinGecko />
         <div
-          className="flex flex-wrap justify-around w-full mt-20"
+          className="flex flex-wrap justify-around w-full "
           style={{ maxWidth: "800px", gap: "10px" }}
         >
           <Staking />
