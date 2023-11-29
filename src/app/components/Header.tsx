@@ -9,7 +9,7 @@ interface HeaderProps {
 
 export default function Header({ parrafo, imageSrc, imageAlt }: HeaderProps) {
   return (
-    <div className="flex justify-center items-center ">
+    <div className="flex justify-center items-center flex-wrap ">
       <h1 className="animate-pulse text-center text-4xl font-semibold leading-8 text-rose-200 pt-20 pb-10 mb-12">
         {parrafo}
       </h1>
