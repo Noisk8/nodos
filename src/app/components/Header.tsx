@@ -14,12 +14,12 @@ export default function Header({ parrafo, imageSrc, imageAlt }: HeaderProps) {
         {parrafo}
       </h1>
 
-      <div className="flex flex-col items-center ml-8">
+      <div className="flex flex-col items-center ml-8 ">
         <Image
           isZoomed
           width={240}
           alt={imageAlt}
-          className="animate-pulse object-cover rounded-xl opacity-50 "
+          className="animate-pulse object-cover   "
           src={imageSrc}
         />
       </div>
