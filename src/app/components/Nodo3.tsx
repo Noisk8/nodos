@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "@nextui-org/react";
+import Link from "next/link";
 
 interface Nodo3Props {
   mix_id: number;
@@ -68,119 +69,43 @@ export default function Nodo3() {
 
   return (
     <Card>
-      <div
-        className="max-w-1xl mx-auto mt-8"
-        style={{
-          boxShadow:
-            "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)",
-        }}
-      >
-        <div className="shadow-lg rounded-lg overflow-hidden text-purple-300 bg-gray-900 mt-8">
-          <h1 className="text-2xl pb-4 bg-gray-800 px-4 py-2 font-bold text-center">
-            Nodo Privacy 🇺🇸
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-            <div>
-              <h3 className="text-xl font-semibold">Mix ID:</h3>
-              <p>{data.mix_id}</p>
+    <div className="max-w-1xl mx-auto mt-8" style={{ boxShadow: "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)" }}>
+        <div className="shadow-lg rounded-lg overflow-hidden bg-gray-900 mt-8">
+            <h1 className="textoplay text-2xl pb-4 bg-gray-800 px-4 py-2 font-bold text-center">
+                Nodo Privacy 🇺🇸
+            </h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+                {[
+                    { label: "Mix ID", value: data.mix_id },
+                    { label: "Host", value: data.mix_node.host },
+                    { label: "Version", value: data.mix_node.version },
+                    { label: "Country", value: `${data.location.country_name} (${data.location.three_letter_iso_country_code})` },
+                    { label: "Status", value: data.status, className: data.status === 'active' ? 'text-green-500' : 'text-red-500' },
+                    { label: "Pledge Amount", value: data.pledge_amount.amount },
+                    { label: "Total Delegation", value: data.total_delegation.amount },
+                    { label: "Stake Saturation", value: data.stake_saturation },
+                    { label: "Uncapped Saturation", value: data.uncapped_saturation },
+                    { label: "Average Uptime", value: data.avg_uptime },
+                    { label: "Node Performance (Last Hour)", value: data.node_performance.last_hour },
+                    { label: "Estimated Operator APY", value: data.estimated_operator_apy },
+                    { label: "Estimated Delegators APY", value: data.estimated_delegators_apy },
+                    { label: "Operating Cost", value: data.operating_cost.amount },
+                    { label: "Profit Margin Percent", value: data.profit_margin_percent },
+                ].map((item, index) => (
+                    <div key={index} className="p-4 bg-gray-800 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold">{item.label}:</h3>
+                        <p className={item.className || ''}>{item.value}</p>
+                    </div>
+                ))}
+                <div className="col-span-full text-center pb-4 pt-8">
+                    <a href="https://harbourmaster.nymtech.net/mixnode/1871" target="_blank" className="bg-gray-800 hover:bg-purple-300 text-white font-bold py-4 px-4 rounded">
+                        Ver en Explorer
+                    </a>
+                </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold">Host:</h3>
-              <p>{data.mix_node.host}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Version:</h3>
-              <p>{data.mix_node.version}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Country:</h3>
-              <p>{data.location.country_name}</p>
-
-              <p> {data.location.three_letter_iso_country_code}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Status:</h3>
-              <p
-                className={
-                  data.status === "active" ? "text-green-500" : "text-red-500"
-                }
-              >
-                {data.status}
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Pledge Amount:</h3>
-              <p>{data.pledge_amount.amount} </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Total Delegation:</h3>
-              <p>{data.total_delegation.amount} </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Stake Saturation:</h3>
-              <p>{data.stake_saturation}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Uncapped Saturation:</h3>
-              <p>{data.uncapped_saturation}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Average Uptime:</h3>
-              <p>{data.avg_uptime}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">
-                Node Performance (Most Recent):
-              </h3>
-              <p>{data.node_performance.most_recent}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">
-                Node Performance (Last Hour):
-              </h3>
-              <p>{data.node_performance.last_hour}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">
-                Node Performance (Last 24h):
-              </h3>
-              <p>{data.node_performance.last_24h}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Estimated Operator APY:</h3>
-              <p>{data.estimated_operator_apy}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">
-                Estimated Delegators APY:
-              </h3>
-              <p>{data.estimated_delegators_apy}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Operating Cost:</h3>
-              <p>{data.operating_cost.amount} </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Profit Margin Percent:</h3>
-              <p>{data.profit_margin_percent}</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Blacklisted:</h3>
-              <p>{data.blacklisted ? "Yes" : "No"}</p>
-            </div>
-            <div className="col-span-full text-center pb-4 pt-8">
-              {" "}
-              <a
-                href="https://harbourmaster.nymtech.net/mixnode/1871"
-                target="_blank"
-                className="bg-gray-800 hover:bg-purple-300 text-white font-bold py-4 px-4 rounded"
-              >
-                Ver en Explorer
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
-    </Card>
+    </div>
+    
+</Card>
   );
 }

@@ -25,3 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+
+.textoplay{
+  textShadow: "2px 2px 4px #FF00FF";
+  color: "#FF00FF";
+}
