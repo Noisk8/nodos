@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Nodos Cypherplatxs',
+  title: 'Monitor de nodos',
   description: 'Nodos de nym en latinoamerica',
 }
 
