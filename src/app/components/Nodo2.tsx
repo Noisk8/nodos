@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Card } from '@nextui-org/react';
+import MapComponent from "./Map";
 
 interface Nodo2Props {
   mix_id: number;
@@ -101,6 +102,7 @@ export default function Nodo3() {
                         </a>
                     </div>
                 </div>
+                <MapComponent latitude={data.location.latitude} longitude={data.location.longitude} />
             </div>
         </div>
         

@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Card } from '@nextui-org/react';
+import MapComponent from "./Map";
 
 
 interface Nodo1Props {
@@ -97,12 +98,14 @@ export default function Nodo3() {
                                 <p className={item.className || ''}>{item.value}</p>
                             </div>
                         ))}
+                      
                         <div className="col-span-full text-center pb-4 pt-8">
                             <a href="https://harbourmaster.nymtech.net/mixnode/915" target="_blank" className="bg-gray-800 hover:bg-purple-300 text-white font-bold py-4 px-4 rounded">
                                 Ver en Explorer
                             </a>
                         </div>
                     </div>
+                    <MapComponent latitude={data.location.latitude} longitude={data.location.longitude} />
                 </div>
             </div>
             
