@@ -19,10 +19,10 @@ export default function NavBar() {
 
     <NavbarContent className="flex flex-col sm:flex-row gap-4" justify="center">
       <NavbarItem>
-        <Link className="text-4xl" href="/nodos" style={{ textShadow: "2px 2px 4px #FF00FF", color: "#FF00FF" }}> ⚗️ Nodos</Link>
+        <Link className="text-3xl" href="/nodos" style={{ textShadow: "2px 2px 4px #FF00FF", color: "#FF00FF" }}> ⚗️ Nodos</Link>
       </NavbarItem>
       <NavbarItem isActive>
-        <Link className="text-4xl" href="/gateways" style={{ textShadow: "2px 2px 4px #FF00FF", color: "#FF00FF" }}> ⚗️ Gateways</Link>
+        <Link className="text-3xl" href="/gateways" style={{ textShadow: "2px 2px 4px #FF00FF", color: "#FF00FF" }}> ⚗️ Gateways</Link>
       </NavbarItem>
     </NavbarContent>
     <NavbarContent justify="end">

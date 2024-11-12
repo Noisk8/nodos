@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Card } from '@nextui-org/react';
 
 
-interface PlatohedritoProps {
+interface EuclidesProps {
  
     location: {
         two_letter_iso_country_code: string;
@@ -150,11 +150,11 @@ interface PlatohedritoProps {
     };
 }
 
-export default function Platohedrito() {
-    const [data, setData] = useState<PlatohedritoProps | null>(null);
+export default function Euclides() {
+    const [data, setData] = useState<EuclidesProps | null>(null);
 
     useEffect(() => {
-        axios.get('https://harbourmaster.nymtech.net/v2/gateways/3ADenfD7dibFMYrpZGRbrnoSxSzpJXtL2U76e9oYT1Lw')
+        axios.get('https://harbourmaster.nymtech.net/v2/gateways/Vo7pueW7ShT8Be2o7gp8PD7y44Dy6NTJAXxknukX7Gx')
             .then(response => {
                 setData(response.data);
             });
@@ -179,9 +179,8 @@ export default function Platohedrito() {
                         { label: "HostName", value: data.self_described.host_information.hostname },
                         { label: "IP Address", value: data.self_described.host_information.ip_address.join(', ') },
                         { label: "Role", value: data.self_described.role },
-                        
                         { label: "Version", value: data.explorer_pretty_bond.gateway.version },
-                     
+                        
                         { label: "As Entry - Can Connect", value: data.last_probe_result.outcome.as_entry.can_connect ? '🟢 Yes' : '🔴 No' },
                         { label: "As Entry - Can Route", value: data.last_probe_result.outcome.as_entry.can_route ? '🟢 Yes' : '🔴 No' },
                         { label: "As Exit - Can Connect", value: data.last_probe_result.outcome.as_exit.can_connect ? '🟢 Yes' : '🔴 No' },
