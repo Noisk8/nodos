@@ -1,5 +1,11 @@
 import NavBar from "../components/Shared/NavBar";
 import Header from "../components/Shared/Header";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Nodos de Nym',
+  description: 'Monitor de Nodos / Gateways de Nym',
+}
 
 export default function GatewaysLayout({
   children,

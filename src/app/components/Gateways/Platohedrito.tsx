@@ -175,7 +175,7 @@ export default function Platohedrito() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
                     {[
                         { label: "Details", value: data.description.details },
-                        { label: "Identity Key", value: data.gateway_identity_key },
+                        { label: "Identity Key", value: ( <div className="break-all">  {data.gateway_identity_key} </div> )},
                         { label: "Location", value: data.explorer_pretty_bond.location.country_name },
                         { label: "HostName", value: data.self_described.host_information.hostname },
                         { label: "IP Address", value: data.self_described.host_information.ip_address.join(', ') },

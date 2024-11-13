@@ -90,9 +90,9 @@ export default function Nodo3() {
                     { label: "Stake Saturation", value: data.stake_saturation },
                     { label: "Uncapped Saturation", value: data.uncapped_saturation },
                     { label: "Average Uptime", value: data.avg_uptime },
-                    { label: "Node Performance (Last Hour)", value: data.node_performance.last_hour },
-                    { label: "Estimated Operator APY", value: data.estimated_operator_apy },
-                    { label: "Estimated Delegators APY", value: data.estimated_delegators_apy },
+                    { label: "Performance (Last Hour)", value: data.node_performance.last_hour },
+                    { label: "Estimated Operator", value: ( <div className="break-all">{ data.estimated_operator_apy } </div>)},
+                    { label: "Estimated Delegators ", value: ( <div className="break-all">{data.estimated_delegators_apy } </div>)},
                     { label: "Operating Cost", value: data.operating_cost.amount },
                     { label: "Profit Margin Percent", value: data.profit_margin_percent },
                 ].map((item, index) => (

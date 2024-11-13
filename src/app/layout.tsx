@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Monitor de nodos',
-  description: 'Nodos de nym en latinoamerica',
+  title: 'Pequeño Monitor de nodos',
+  description: 'Monitor de Nodos / Gateways de Nym',
 }
 
 export default function RootLayout({

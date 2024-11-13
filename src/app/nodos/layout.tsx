@@ -1,6 +1,13 @@
 import NavBar from "../components/Shared/NavBar";
 import Header from "../components/Shared/Header"
+import type { Metadata } from 'next'
 
+
+
+export const metadata: Metadata = {
+  title: 'Nodos de Nym',
+  description: 'Monitor de Nodos / Gateways de Nym',
+}
 
 export default function NodosLayout({
   children,
@@ -9,7 +16,7 @@ export default function NodosLayout({
 }) {
   return (
    
-   <section className="flex min-h-screen flex-col items-center  p-24">
+    <section className="flex min-h-screen flex-col items-center p-4 md:p-24">
       <Header
           parrafo="Monitor de Nodos"
           imageAlt="esta foto"
