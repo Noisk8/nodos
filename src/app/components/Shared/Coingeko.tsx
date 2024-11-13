@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card, Avatar } from "@nextui-org/react";
 import Image from "next/image";
+import SkeletonCoinGeko from "../Skeletons/SKeletonCoingeko";
 
 // Definición de la interfaz para las propiedades del componente CoinGecko
 interface CoinGeckoProps {
@@ -44,7 +45,7 @@ export default function CoinGecko() {
 
   // Renderizar un mensaje de carga si los datos aún no están disponibles
   if (!data) {
-    return <div className="animate-pulse">🕸️</div>;
+    return <SkeletonCoinGeko  />;
   }
 
   // Renderizar la interfaz de usuario con los datos de la criptomoneda
