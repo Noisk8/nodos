@@ -52,7 +52,9 @@ operating_cost: {
   family_id: null | string;
   blacklisted: boolean;
 }
-export default function Nodo3() {
+export default function Nodo2() {
+
+    
     const [data, setData] = useState<Nodo2Props | null>(null);
 
     useEffect(() => {
@@ -102,7 +104,7 @@ export default function Nodo3() {
                         </a>
                     </div>
                 </div>
-                <MapComponent latitude={data.location.latitude} longitude={data.location.longitude} />
+                {/* <MapComponent latitude={data.location.latitude} longitude={data.location.longitude} /> */}
             </div>
         </div>
         

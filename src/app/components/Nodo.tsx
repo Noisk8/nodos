@@ -1,60 +1,61 @@
-'use client'; 
+'use client';
 
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Card } from '@nextui-org/react';
-import MapComponent from "./Map";
+import dynamic from "next/dynamic";
+
+const DynamicMap = dynamic(() => import("./Map"), { ssr: false });
 
 
 interface Nodo1Props {
-
-  mix_id: number;
-  location: {
-    two_letter_iso_country_code: string;
-    three_letter_iso_country_code: string;
-    country_name: string;
-    latitude: number;
-    longitude: number;
-  };
-  status: string;
-  pledge_amount: {
-    denom: string;
-    amount: string;
-  };
-  total_delegation: {
-    denom: string;
-    amount: string;
-  };
-  owner: string;
-  layer: number;
-  mix_node: {
-    
-    host: string;
-    mix_port: number;
-    verloc_port: number;
-    http_api_port: number;
-    sphinx_key: string;
-    identity_key: string;
-    version: string;
-  };
-  stake_saturation: number;
-  uncapped_saturation: number;
-  avg_uptime: number;
-  node_performance: {
-    most_recent: string;
-    last_hour: string;
-    last_24h: string;
-  };
-  estimated_operator_apy: number;
-  estimated_delegators_apy: number;
-operating_cost: {
-    amount: number;
-};
-  profit_margin_percent: string;
-  family_id: null | string;
-  blacklisted: boolean;
+    mix_id: number;
+    location: {
+        two_letter_iso_country_code: string;
+        three_letter_iso_country_code: string;
+        country_name: string;
+        latitude: number;
+        longitude: number;
+    };
+    status: string;
+    pledge_amount: {
+        denom: string;
+        amount: string;
+    };
+    total_delegation: {
+        denom: string;
+        amount: string;
+    };
+    owner: string;
+    layer: number;
+    mix_node: {
+        host: string;
+        mix_port: number;
+        verloc_port: number;
+        http_api_port: number;
+        sphinx_key: string;
+        identity_key: string;
+        version: string;
+    };
+    stake_saturation: number;
+    uncapped_saturation: number;
+    avg_uptime: number;
+    node_performance: {
+        most_recent: string;
+        last_hour: string;
+        last_24h: string;
+    };
+    estimated_operator_apy: number;
+    estimated_delegators_apy: number;
+    operating_cost: {
+        amount: number;
+    };
+    profit_margin_percent: string;
+    family_id: null | string;
+    blacklisted: boolean;
 }
-export default function Nodo3() {
+
+const Nodo1: React.FC = () => {
     const [data, setData] = useState<Nodo1Props | null>(null);
 
     useEffect(() => {
@@ -98,17 +99,17 @@ export default function Nodo3() {
                                 <p className={item.className || ''}>{item.value}</p>
                             </div>
                         ))}
-                      
                         <div className="col-span-full text-center pb-4 pt-8">
                             <a href="https://harbourmaster.nymtech.net/mixnode/915" target="_blank" className="bg-gray-800 hover:bg-purple-300 text-white font-bold py-4 px-4 rounded">
                                 Ver en Explorer
                             </a>
                         </div>
                     </div>
-                    <MapComponent latitude={data.location.latitude} longitude={data.location.longitude} />
+                    <DynamicMap latitude={data.location.latitude} longitude={data.location.longitude} />
                 </div>
             </div>
-            
         </Card>
     );
-}
+};
+
+export default Nodo1;

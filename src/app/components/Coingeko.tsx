@@ -1,6 +1,9 @@
+'use client';
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card, Avatar } from "@nextui-org/react";
+import Image from "next/image";
 
 // Definición de la interfaz para las propiedades del componente CoinGecko
 interface CoinGeckoProps {
@@ -52,7 +55,7 @@ export default function CoinGecko() {
       </div>
    
       <div className="flex items-center">
-      <img src={data.image} alt="Nym" className="w-24 h-24 rounded-full border-2" />
+      <Image  width="20" height="20" src={data.image} alt="Nym" className="w-24 h-24 rounded-full border-2" />
       <div className="ml-4">
         <h2 className="text-xl font-semibold">
         1 Nym = {data.currentPrice.usd} USD

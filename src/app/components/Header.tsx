@@ -1,6 +1,9 @@
+'use client';
+
 import React from "react";
 import { Image } from "@nextui-org/react";
 import Link from "next/link";
+import { useEffect } from "react";
 
 interface HeaderProps {
   parrafo: string;
@@ -9,6 +12,8 @@ interface HeaderProps {
 }
 
 export default function Header({ parrafo, imageSrc, imageAlt }: HeaderProps) {
+  
+ 
   return (
     <div className="flex justify-center items-center flex-wrap ">
         <Link href="/">

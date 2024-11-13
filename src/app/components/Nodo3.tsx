@@ -1,5 +1,5 @@
-"use client";
 
+'use client';
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "@nextui-org/react";
@@ -103,8 +103,8 @@ export default function Nodo3() {
                     </a>
                 </div>
             </div>
-            <MapComponent latitude={data.location.latitude} longitude={data.location.longitude} />
-       
+            {/* <MapComponent latitude={data.location.latitude} longitude={data.location.longitude} />
+        */}
         </div>
     </div>
     
