@@ -50,28 +50,18 @@ export default function CoinGecko() {
 
   // Renderizar la interfaz de usuario con los datos de la criptomoneda
   return (
-    <div className="bg-gray-900 p-5 rounded-lg shadow-xl text-purple-300 flex flex-col items-end mt-16" style={{boxShadow: "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)"}}>
-      <div className="flex justify-between items-center w-full">
-      <p></p>
-      </div>
-   
-      <div className="flex items-center">
-      <Image  width="20" height="20" src={data.image} alt="Nym" className="w-24 h-24 rounded-full border-2" />
-      <div className="ml-4">
-        <h2 className="text-xl font-semibold">
+    <div className="bg-gray-900 p-5 rounded-lg shadow-xl text-white flex flex-col items-center mt-16" style={{boxShadow: "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)"}}>
+      <Image width="80" height="80" src={data.image} alt="Nym" className="w-24 h-24 rounded-full border-2 mb-4" />
+      <div className="text-center">
+      <h2 className="text-2xl font-semibold">
         1 Nym = {data.currentPrice.usd} USD
-        </h2>
-      
-        <p className="text-lg">
-        Rango de Cap en Mercado: {data.marketCapRank}
-        </p>
-      </div>
-     
+      </h2>
+   
       </div>
       <div className="flex justify-center w-full pt-8">
-      <Avatar
+      {/* <Avatar
         src="https://static.coingecko.com/s/coingecko-logo-8903d34ce19ca4be1c81f0db30e924154750d208683fad7ae6f2ce06c76d0a56.png"
-      />
+      /> */}
       </div>
     </div>
     
