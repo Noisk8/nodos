@@ -83,7 +83,7 @@ const Nodo1: React.FC = () => {
                             { label: "Host", value: data.mix_node.host },
                             { label: "Version", value: data.mix_node.version },
                             { label: "Country", value: `${data.location.country_name} (${data.location.three_letter_iso_country_code})` },
-                            { label: "Status", value: data.status, className: data.status === 'active' ? 'text-green-500' : 'text-red-500' },
+                            { label: "Status", value: data.status === 'active' ? 'Active 🟢' : ' Inactive 🔴', className: data.status === 'active' ? 'text-green-500' : 'text-red-500' },
                             { label: "Pledge Amount", value: data.pledge_amount.amount },
                             { label: "Total Delegation", value: data.total_delegation.amount },
                             { label: "Stake Saturation", value: data.stake_saturation },
