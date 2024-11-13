@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "@nextui-org/react";
 import dynamic from "next/dynamic";
+import SkeletonLoader from "./SkeletonLoader";
 
 const DynamicMap = dynamic(() => import("./Map"), { ssr: false });
 
@@ -66,7 +67,7 @@ export default function Nodo3() {
   }, []);
 
   if (!data) {
-    return <div className="animate-pulse">🕸️</div>;
+    return <SkeletonLoader />;
   }
 
   return (
@@ -112,3 +113,5 @@ export default function Nodo3() {
 </Card>
   );
 }
+
+

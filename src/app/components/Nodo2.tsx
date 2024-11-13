@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Card } from '@nextui-org/react';
-
+import SkeletonLoader from "./SkeletonLoader";
 import dynamic from "next/dynamic";
 
 const DynamicMap = dynamic(() => import("./Map"), { ssr: false });
@@ -69,9 +69,8 @@ export default function Nodo2() {
     }, []);
 
     if (!data) {
-        return <div className="animate-pulse">🕸️</div>;
-    }
-
+        return <SkeletonLoader />;
+      }
     return (
         <Card>
         <div className="max-w-1xl mx-auto mt-8" style={{ boxShadow: "0 8px 12px -2px rgba(255, 0, 255, 0.1), 0 4px 8px -2px rgba(255, 0, 255, 0.06)" }}>

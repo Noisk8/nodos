@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Card } from '@nextui-org/react';
 import dynamic from "next/dynamic";
+import SkeletonLoader from "./SkeletonLoader";
 
 const DynamicMap = dynamic(() => import("./Map"), { ssr: false });
 
@@ -66,8 +67,8 @@ const Nodo1: React.FC = () => {
     }, []);
 
     if (!data) {
-        return <div className="animate-pulse">🕸️</div>;
-    }
+        return <SkeletonLoader />;
+      }
 
     return (
         <Card>

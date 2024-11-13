@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "@nextui-org/react";
+import SkeletonGateways from "./SkeletonGateways";
 
 interface WasiProps {
   location: {
@@ -162,7 +163,7 @@ export default function Wasi() {
   }, []);
 
   if (!data) {
-    return <div className="animate-pulse">🕸️</div>;
+    return <SkeletonGateways />;
   }
 
   return (

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Card } from '@nextui-org/react';
 
+import SkeletonGateways from "./SkeletonGateways";
 
 interface EuclidesProps {
  
@@ -160,9 +161,7 @@ export default function Euclides() {
             });
     }, []);
 
-    if (!data) {
-        return <div className="animate-pulse">🕸️</div>;
-    }
+  if (!data) {  return <SkeletonGateways />; }
 
     return (
         <Card>
