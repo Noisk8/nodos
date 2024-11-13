@@ -14,7 +14,7 @@ export default function NavBar() {
 
   return (
 
-  <Navbar position="static" className="pt-8">
+  <Navbar position="static" className="pt-2 md:pt-8 w-full">
     <Link className="text-4xl" href="/nodos" style={{ textShadow: "2px 2px 4px #FF00FF", color: "#FF00FF" }}> </Link>
 
     <NavbarContent className="flex flex-col sm:flex-row gap-4" justify="center">

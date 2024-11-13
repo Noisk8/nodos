@@ -7,7 +7,7 @@ import Wasi from "../components/Gateways/Wasi";
 
 export default function Gateways() {
   return (
-    <div>
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Platohedrito />
       <Diogenes />
       <Euclides />

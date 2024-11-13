@@ -4,6 +4,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import Header from "./components/Shared/Header";
 import CoinGecko from "./components/Shared/Coingeko";
 import NavBar from "./components/Shared/NavBar";
+import Staking from "./components/Staking";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         />
         <NavBar />
         <CoinGecko />
+       {/* <Staking />   */}
       </main>
     </NextUIProvider>
   );

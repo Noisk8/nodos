@@ -7,7 +7,7 @@ export default function GatewaysLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex min-h-screen flex-col items-center  p-24">
+    <section className="flex min-h-screen flex-col items-center p-4 md:p-24">
       <Header
         parrafo="Monitor de Nodos"
         imageAlt="esta foto"

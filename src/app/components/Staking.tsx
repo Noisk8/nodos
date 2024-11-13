@@ -31,7 +31,7 @@ export default function App() {
                 <h1 className="text-7xl font-semibold text-foreground/90 text-purple-300">Staking</h1>
               
                 <a href="#" target="_blank"> <h1 className="text-3xl  mt-8 mb-4">Cómo hacer Staking?</h1></a>
-                <a href="#" target="_blank"><h2 className="text-2xl text-foreground/80 text-purple-300 mt-4 ">🌐 PLATOHEDRO</h2></a>
+                <a href="/nodos" target="_blank"><h2 className="text-2xl text-foreground/80 text-purple-300 mt-4 ">🌐 PLATOHEDRO</h2></a>
                 <a href="#" target="_blank"><h2 className="text-2xl text-foreground/80 text-purple-300 mt-4">🌐 CYPHERPLATXS</h2></a>
               </div>
          
