@@ -2,7 +2,11 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Card } from '@nextui-org/react';
-import MapComponent from "./Map";
+
+import dynamic from "next/dynamic";
+
+const DynamicMap = dynamic(() => import("./Map"), { ssr: false });
+
 
 interface Nodo2Props {
   mix_id: number;
@@ -104,7 +108,7 @@ export default function Nodo2() {
                         </a>
                     </div>
                 </div>
-                {/* <MapComponent latitude={data.location.latitude} longitude={data.location.longitude} /> */}
+                <DynamicMap latitude={data.location.latitude} longitude={data.location.longitude} />
             </div>
         </div>
         
