@@ -1,9 +1,9 @@
 "use client";
 import * as React from "react";
 import { NextUIProvider } from "@nextui-org/react";
-import Header from "./components/Header";
-import CoinGecko from "./components/Coingeko";
-import NavBar from "./components/NavBar";
+import Header from "./components/Shared/Header";
+import CoinGecko from "./components/Shared/Coingeko";
+import NavBar from "./components/Shared/NavBar";
 
 
 export default function Home() {

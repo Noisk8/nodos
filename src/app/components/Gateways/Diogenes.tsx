@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "@nextui-org/react";
-import SkeletonGateways from "./SkeletonGateways";
+import SkeletonGateways from "../Skeletons/SkeletonGateways";
 
-interface BambinoProps {
+interface DiogenesProps {
   location: {
     two_letter_iso_country_code: string;
     three_letter_iso_country_code: string;
@@ -149,13 +149,13 @@ interface BambinoProps {
   };
 }
 
-export default function Bambino() {
-  const [data, setData] = useState<BambinoProps | null>(null);
+export default function Diogenes() {
+  const [data, setData] = useState<DiogenesProps | null>(null);
 
   useEffect(() => {
     axios
       .get(
-        "https://harbourmaster.nymtech.net/v2/gateways/98uf1hyzmWTinkyc5PGyCxDo3E9QQK5XhWQ8B8z8aFoX"
+        "https://harbourmaster.nymtech.net/v2/gateways/BeT6Hyt1cSvtC5rYZeabZ5E3FWqRXHqUxb62DTLh564K"
       )
       .then((response) => {
         setData(response.data);

@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Card } from '@nextui-org/react';
-import SkeletonLoader from "./SkeletonLoader";
+import SkeletonLoader from "../Skeletons/SkeletonLoader";
 import dynamic from "next/dynamic";
 
-const DynamicMap = dynamic(() => import("./Map"), { ssr: false });
+const DynamicMap = dynamic(() => import("../Mapa/Map"), { ssr: false });
 
 
 interface Nodo2Props {

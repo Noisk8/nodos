@@ -1,6 +1,6 @@
-import Nodo3 from "../components/Nodo3";
-import Nodo2 from "../components/Nodo2";
-import Nodo1 from "../components/Nodo";
+import Nodo3 from "../components/Nodes/Nodo3";
+import Nodo2 from "../components/Nodes/Nodo2";
+import Nodo1 from "../components/Nodes/Nodo";
 
 
 export default function NodosPage() {

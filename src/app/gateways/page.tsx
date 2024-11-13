@@ -1,9 +1,9 @@
-import Platohedrito from "@/app/components/Platohedrito";
-import Diogenes from "@/app/components/Diogenes";
-import Euclides from "../components/Euclides";
-import Cumbia from "../components/Cumbia";
-import Bambino from "../components/Bambino";
-import Wasi from "../components/Wasi";
+import Platohedrito from "@/app/components/Gateways/Platohedrito";
+import Diogenes from "@/app/components/Gateways/Diogenes";
+import Euclides from "../components/Gateways/Euclides";
+import Cumbia from "../components/Gateways/Cumbia";
+import Bambino from "../components/Gateways/Bambino";
+import Wasi from "../components/Gateways/Wasi";
 
 export default function Gateways() {
   return (

@@ -4,9 +4,9 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Card } from '@nextui-org/react';
 import dynamic from "next/dynamic";
-import SkeletonLoader from "./SkeletonLoader";
+import SkeletonLoader from "../Skeletons/SkeletonLoader";
 
-const DynamicMap = dynamic(() => import("./Map"), { ssr: false });
+const DynamicMap = dynamic(() => import("../Mapa/Map"), { ssr: false });
 
 
 interface Nodo1Props {

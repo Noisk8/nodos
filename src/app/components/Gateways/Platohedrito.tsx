@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { Card } from '@nextui-org/react';
-import SkeletonGateways from "./SkeletonGateways";
+import SkeletonGateways from "../Skeletons/SkeletonGateways";
 
 
 interface PlatohedritoProps {

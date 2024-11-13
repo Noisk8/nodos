@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "@nextui-org/react";
-import SkeletonGateways from "./SkeletonGateways";
+import SkeletonGateways from "../Skeletons/SkeletonGateways";
 
-interface DiogenesProps {
+interface CumbiaProps {
   location: {
     two_letter_iso_country_code: string;
     three_letter_iso_country_code: string;
@@ -149,13 +149,13 @@ interface DiogenesProps {
   };
 }
 
-export default function Diogenes() {
-  const [data, setData] = useState<DiogenesProps | null>(null);
+export default function Cumbia() {
+  const [data, setData] = useState<CumbiaProps | null>(null);
 
   useEffect(() => {
     axios
       .get(
-        "https://harbourmaster.nymtech.net/v2/gateways/BeT6Hyt1cSvtC5rYZeabZ5E3FWqRXHqUxb62DTLh564K"
+        "https://harbourmaster.nymtech.net/v2/gateways/CrvF1Q6Dft3sYSsDpNV4R3W8vJh9Q3W7kqzFjTiHRWS2"
       )
       .then((response) => {
         setData(response.data);

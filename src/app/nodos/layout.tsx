@@ -1,5 +1,5 @@
-import NavBar from "../components/NavBar";
-import Header from "../components/Header"
+import NavBar from "../components/Shared/NavBar";
+import Header from "../components/Shared/Header"
 
 
 export default function NodosLayout({

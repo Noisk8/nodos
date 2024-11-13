@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "@nextui-org/react";
-import SkeletonGateways from "./SkeletonGateways";
+import SkeletonGateways from "../Skeletons/SkeletonGateways";
 
-interface WasiProps {
+interface BambinoProps {
   location: {
     two_letter_iso_country_code: string;
     three_letter_iso_country_code: string;
@@ -149,13 +149,13 @@ interface WasiProps {
   };
 }
 
-export default function Wasi() {
-  const [data, setData] = useState<WasiProps | null>(null);
+export default function Bambino() {
+  const [data, setData] = useState<BambinoProps | null>(null);
 
   useEffect(() => {
     axios
       .get(
-        "https://harbourmaster.nymtech.net/v2/gateways/7mperTohH5oNonkZH7EJkuZaa5WMowdgYY7ah6UFgPxJ"
+        "https://harbourmaster.nymtech.net/v2/gateways/98uf1hyzmWTinkyc5PGyCxDo3E9QQK5XhWQ8B8z8aFoX"
       )
       .then((response) => {
         setData(response.data);

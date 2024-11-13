@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "@nextui-org/react";
-import SkeletonGateways from "./SkeletonGateways";
+import SkeletonGateways from "../Skeletons/SkeletonGateways";
 
-interface CumbiaProps {
+interface WasiProps {
   location: {
     two_letter_iso_country_code: string;
     three_letter_iso_country_code: string;
@@ -149,13 +149,13 @@ interface CumbiaProps {
   };
 }
 
-export default function Cumbia() {
-  const [data, setData] = useState<CumbiaProps | null>(null);
+export default function Wasi() {
+  const [data, setData] = useState<WasiProps | null>(null);
 
   useEffect(() => {
     axios
       .get(
-        "https://harbourmaster.nymtech.net/v2/gateways/CrvF1Q6Dft3sYSsDpNV4R3W8vJh9Q3W7kqzFjTiHRWS2"
+        "https://harbourmaster.nymtech.net/v2/gateways/7mperTohH5oNonkZH7EJkuZaa5WMowdgYY7ah6UFgPxJ"
       )
       .then((response) => {
         setData(response.data);
